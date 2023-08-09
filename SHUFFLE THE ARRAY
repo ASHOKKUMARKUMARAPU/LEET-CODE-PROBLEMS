@@ -1,0 +1,18 @@
+class Solution:
+    def shuffle(self, nums: List[int], n: int) -> List[int]:
+        l = len(nums)
+        first = []
+        last = []
+        res = []
+        i = 0
+        j = 0
+        for i in range(n):
+            first.append(nums[i])
+        for i in range(n, 2*n):
+            last.append(nums[i])
+
+        for i in range(n):
+            res.append(first[i])
+            res.append(last[i])
+        i += 1
+        return res
