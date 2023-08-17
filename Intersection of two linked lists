@@ -1,0 +1,14 @@
+class Solution:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
+            hash_set = set()
+            curr = headA
+
+            while curr:
+                hash_set.add(curr)
+                curr = curr.next
+
+            curr = headB
+            while curr:
+                if curr in hash_set:
+                    return curr
+                curr = curr.next
