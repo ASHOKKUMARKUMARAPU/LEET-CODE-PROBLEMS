@@ -1,0 +1,13 @@
+res = 0
+
+        for i in range(len(operations)):
+            if operations[i] =='--X':
+                res -= 1
+            elif operations[i] == 'X++':
+                res += 1
+            elif operations[i] == 'X--':
+                res -= 1
+            elif operations[i] == '++X':
+                res += 1
+
+        return res
