@@ -1,0 +1,20 @@
+class Solution:
+    def decodeMessage(self, key: str, message: str) -> str:
+        res = ''
+        dictionary = {' ':' '}
+        import string
+        x = string.ascii_lowercase
+
+        j = 0
+        for i in key:
+            if i not in dictionary:
+                dictionary[i] =x[j]
+                j += 1
+                
+        for char in message:
+            if char in dictionary:
+                res += dictionary[char]
+            else:
+                res += char
+
+        return res
