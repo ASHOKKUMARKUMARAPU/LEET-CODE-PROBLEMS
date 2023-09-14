@@ -1,0 +1,12 @@
+class Solution:
+    def sortSentence(self, s: str) -> str:
+        def extract_number(a):
+            return int(a[-1])
+
+        res = ''
+        list1 = s.split(" ")
+
+        sort = sorted(list1, key=extract_number)
+        for i in sort:
+            res += i[:-1] + ' '
+        return res[:-1]
