@@ -1,0 +1,4 @@
+class Solution:
+    def checkIfPangram(self, sentence: str) -> bool:
+        string_set = set(string.ascii_lowercase)
+        return string_set.issubset(sentence)
